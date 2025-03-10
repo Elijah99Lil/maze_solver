@@ -4,19 +4,29 @@ def main():
     win = Window(800, 600)
     
     # Test a simple line to make sure the Window is working
-    test_line = Line(Point(10, 10), Point(100, 100))
-    win.draw_line(test_line)
+    '''test_line = Line(Point(10, 10), Point(100, 100))
+    win.draw_line(test_line)'''
     
     # Create and draw cells
-    cell = Cell(200, 200, 300, 300, win)
+    cell = Cell(100, 100, 125, 125, win)
+    cell.has_top_wall = False
+    cell.has_right_wall = False
     cell.draw()
     
-    cell2 = Cell(400, 400, 500, 500, win)
+    
+    cell2 = Cell(125, 100, 150, 125, win)
+    cell2.has_left_wall = False
     cell2.has_bottom_wall = False
     cell2.draw()
+    cell.draw_move(cell2)
+
+    cell3 = Cell(125, 125, 150, 150, win)
+    cell3.has_bottom_wall = False
+    cell3.has_top_wall = False
+    cell3.draw()
+    cell2.draw_move(cell3)
     
+    print()
     win.wait_for_close()
-
-
 
 main()

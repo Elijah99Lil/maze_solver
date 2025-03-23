@@ -31,5 +31,14 @@ class Tests(unittest.TestCase):
             num_cols,
         )
 
+    def test_white_lines(self):
+        win = Window(200,200)
+        num_rows = 10
+        num_cols = 10
+        m1 = Maze(0, 0, num_rows, num_cols, 10, 10, win)
+        self.assertEqual(
+            line = "white"
+        )
+
 if __name__ == "__main__":
     unittest.main()

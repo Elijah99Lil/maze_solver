@@ -6,7 +6,7 @@ def main():
 
     maze = Maze(10, 10, 12, 16, 50, 50, win)
     
-    '''# Test a simple line to make sure the Window is working
+    '''#Test a simple line to make sure the Window is working
     test_line = Line(Point(10, 10), Point(100, 100))
     win.draw_line(test_line)
     
